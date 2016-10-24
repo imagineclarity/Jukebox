@@ -38,7 +38,7 @@ open class JukeboxItem: NSObject {
         fileprivate(set) public var title: String?
         fileprivate(set) public var album: String?
         fileprivate(set) public var artist: String?
-        fileprivate(set) public var artwork: UIImage?
+        public var artwork: UIImage?
     }
     
     // MARK:- Properties -
