@@ -34,10 +34,10 @@ protocol JukeboxItemDelegate : class {
 open class JukeboxItem: NSObject {
     
     public struct Meta {
-        fileprivate(set) public var duration: Double?
-        fileprivate(set) public var title: String?
-        fileprivate(set) public var album: String?
-        fileprivate(set) public var artist: String?
+        public var duration: Double?
+        public var title: String?
+        public var album: String?
+        public var artist: String?
         public var artwork: UIImage?
     }
     
@@ -50,8 +50,8 @@ open class JukeboxItem: NSObject {
     open  let URL: Foundation.URL
     
     fileprivate(set) open var playerItem: AVPlayerItem?
-    fileprivate (set) open var currentTime: Double?
-    fileprivate(set) open lazy var meta = Meta()
+    fileprivate(set) open var currentTime: Double?
+    open lazy var meta = Meta()
 
     
     fileprivate var timer: Timer?
