@@ -310,7 +310,7 @@ open class Jukebox: NSObject, JukeboxItemDelegate {
     
     // MARK: Playback
     
-    func updateInfoCenter() {
+    public func updateInfoCenter() {
         guard let item = currentItem else {return}
         
         let title = (item.meta.title ?? item.localTitle) ?? item.URL.lastPathComponent
