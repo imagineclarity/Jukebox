@@ -477,11 +477,8 @@ open class Jukebox: NSObject, JukeboxItemDelegate {
     }
     
     func playerItemDidPlayToEnd(_ notification : Notification){
-        if playIndex >= queuedItems.count - 1 {
-            stop()
-        } else {
-            play(atIndex: playIndex + 1)
-        }
+        pause()
+        seek(toSecond: 0)
     }
     
     func timerAction() {
